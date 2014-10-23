@@ -19,3 +19,8 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Map Caps Lock to Control
 /usr/bin/defaults -currentHost write -g "com.apple.keyboard.modifiermapping.1452-544-0" -array "<dict><key>HIDKeyboardModifierMappingDst</key><integer>2</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>"
+
+# Install dependencies for `gifify` function
+brew install ffmpeg
+brew install gifsicle
+brew install imagemagick
