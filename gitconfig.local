@@ -1,13 +1,47 @@
-[alias]
-  l = log --pretty=colored
-[diff]
-  tool = vimdiff
-[merge]
-  tool = vimdiff
-[mergetool "vimdiff"]
-  cmd = vimdiff -f $LOCAL $MERGED $REMOTE
-[pretty]
-  colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [user]
-  name = Dan Croak
-  email = dan@statusok.com
+[credential]
+	helper = osxkeychain
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+[alias]
+	st = status -sb
+	ci = commit -v
+	br = branch -av
+	ql = log --abbrev-commit --decorate --pretty=format:'%Cred%cn%Creset: %Cred%h%Creset %s %Cblue%ar%Creset' --graph
+	conflicts = !git st | grep unmerged: | cut -c 15-
+        modified = ls-files -m
+        update = !git fetch && git rebase origin/master 
+        append = !git add -A && git commit --amend -C HEAD
+  new = !sh -c 'git push origin master:refs/heads/$0 && git fetch origin && git branch --track $0 origin/$0 && git checkout $0'
+  delete = !sh -c 'git checkout master && git push origin :refs/heads/$0 && git branch -d $0'
+  track = !sh -c 'git fetch origin && git branch --set-upstream $0 origin/$0 && git checkout $0'
+  publish = push -u origin
+[merge]
+  tool = opendiff
+  summary = true
+[diff]
+  wordRegex = [^[:space:]]
+[core]
+  excludesfile = /Users/diyahm/.gitignore
+  whitespace = trailing-space,space-before-tab,tab-in-indent
+[status]
+  relativePaths = false
+[apply]
+  whitespace = nowarn
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[rerere]
+	enabled = 1
+[push]
+	default = simple
+[user]
+	name = Hadiyah Mujhid
+	initials = hm
+	email = hadiyah@playpenlabs.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

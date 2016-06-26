@@ -1,17 +1,4 @@
 #!/usr/bin/env zsh
 
 # Most common directories
-export CDPATH="$CDPATH:$HOME/src/github.com"
-
-# Go
-export GOPATH="$HOME"
-export PATH="$HOME/bin:$PATH"
-
-# Ruby
-# eval "$(rbenv init - --no-rehash)"
-
-# Docker
-eval "$(docker-machine env default)"
-
-# thoughtbot/laptop
-export PATH="$HOME/.bin:$PATH"
+export CDPATH="$CDPATH:$HOME/github.com"

@@ -3,28 +3,11 @@ alias flush-cache="sudo discoveryutil mdnsflushcache; sudo discoveryutil udnsflu
 
 # Git
 alias me="git branch -r | ag dc"
-alias gabe='g commit --amend --author="Dan Croak and Gabe Berke-Williams <dan+gabe@thoughtbot.com>"'
-
-# Go
-alias gfa="go fmt . ./..."
-
-# GPG
-alias gpg="gpg2"
 
 # Postgres
 alias restart-postgres="rm /usr/local/var/postgres/postmaster.pid; launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist; launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
-# Ruby
-alias install-missing-ruby="brew update && brew upgrade ruby-build && rbenv install"
-
-# Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate"
-alias m="migrate"
-
-# Todo
-alias todo="vim ~/Dropbox\ \(Personal\)/todo"
-
 # Unix
 alias ...='../..'
 alias mkdir='mkdir -p'
-alias v='nvim'
+alias v='mvim'

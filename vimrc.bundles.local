@@ -1,10 +1,3 @@
-Plug 'acarapetis/vim-colors-github'
-Plug 'avdgaag/vim-phoenix'
-Plug 'benekastah/neomake'
-Plug 'dsawardekar/ember.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'fatih/vim-go'
-Plug 'junegunn/vim-easy-align'
-Plug 'mattn/emmet-vim'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'nicholaides/words-to-avoid.vim'
+Plug 'tpope/vim-vividchalk', { 'do': 'mkdir ~/.vim/colors; cp ~/.vim/bundle/vim-vividchalk/colors/* ~/.vim/colors' }
+Plug 'ervandew/supertab'
+Plug 'Shougo/neocomplete.vim'
