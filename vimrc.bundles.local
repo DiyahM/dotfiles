@@ -2,3 +2,4 @@ Plug 'tpope/vim-vividchalk', { 'do': 'mkdir ~/.vim/colors; cp ~/.vim/bundle/vim-
 Plug 'ervandew/supertab'
 Plug 'Shougo/neocomplete.vim'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'mxw/vim-jsx'
